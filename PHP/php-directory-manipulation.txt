@@ -1,0 +1,126 @@
+__FILE__ 
+__LINE__
+dirname(__FILE__)
+__DIR__ (PHP advanced Versions only)
+file_exists() -> Check for file and dirname
+is_file 
+is_dir
+rwx- 4210
+who am i
+ls -la
+sudo chown jeeva files/
+sudo chmod 777 file.php
+safe_mode=off
+
+$owner = fileowner("file.php") -> gives id
+
+POSIX Library
+$owner_array = posix_getpwuid($owner);
+echo $owner_array['name']
+
+chown('file.php','jeeva') //Only root
+
+decoct(fileperms('file.php')) -> 10066
+substr(decoct(fileperms('file.php')),2) -> 066
+
+chmod('file.php',0777);
+
+is_readable('file.php')
+is_writable('file.php')
+
+File (r,w,x,a) (t,b) t->\r\n
+
+if(	$handle = fopen("simple.txt",'w'))
+fclose($handle)
+fwrite($handle,'123')
+
+if($size = file_put_contents($file,$content)){}
+
+unlink('file.txt')
+
+$pos = ftell($handle)
+fseek($handle,$pos-10) ->Overwrite
+rewind($handle) 
+Capture data and reoutput
+
+$handle =  fopen($file,'r')
+$content = fread($handle,$no_of_bytes)
+nl2br()
+$content = file_get_contents($file)
+
+Incremental Reading
+while(!feof($handle)){
+	$content = fgets($handle);
+	echo "$content";
+}
+
+File Details
+filesize($file)
+filemtime($file) -> Unix Timestamp
+filectime($file) -> Unix Timestamp
+fileatime($file) -> Unix Timestamp
+
+strftime('%m/%d/%Y %H:%M',time())
+
+touch($file) -> Update all current time
+
+$parts = pathinfo(__FILE__) -> Get array
+$parts['dirname']
+$parts['basename']
+$parts['filename']
+$parts['extension']
+
+getcwd()
+chdir('name')
+mkdir('new',0777)
+mkdir('new/test/file',0777,true) ->Recursive
+rmdir('new/test/file') ->Should be outside
+
+if($dir_handle = opendir($dir))
+	while($filename = readdir($dir_handle)){
+			echo {$filename}
+	}
+closedir($dir_handle)
+
+$dir_array = scandir($dir)
+foreach($dir_array as $file){
+	if(stripos($file,'.')>0){
+		echo "{$file}"
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

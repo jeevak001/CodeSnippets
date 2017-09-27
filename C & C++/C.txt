@@ -1,0 +1,176 @@
+fprintf(stdout,"Hai\n"); 
+fprintf(stderr,"Hai\n");
+
+enum {max_size = 127};
+static char string[max_size+1] = "";
+fgets(string,max_size,stdin);
+printf("The string is %s",string);
+
+#include<stdio.h>
+int main(int argc,char** argv){
+
+	return 0;
+}
+
+int x = printf("Hai") * 3;
+
+printf("The value is %x %d %i",a,b,c);
+
+char * s = "String Pointer";
+printf(s);
+
+Storage Classes and Identifiers Scope
+
+global local 
+auto Within block and deallocated outside
+static Maintains values within calls
+extern Variable defined elsewhere 
+register Store it in register
+
+extern int a; //a defined elsewhere
+cout<<a;
+extern void func(); //func() defined elsewhere
+func(); //Call function
+
+Functions
+
+Declaration before Definitions
+Best practise is to declare vars before use
+
+#include "func.h" //File included
+
+Pointers //Dangerous and Useful
+
+int *p;
+int a = 100;
+p = &a;
+int another = *p;
+
+Arrays and Strings
+
+int a[5];
+a[0] = 100;
+int *p = a;
+*p = 200;
+p++; //Points to next
+*(++p) //Useful tool
+
+char s[] = {'h','a','i',0}; //How string is 
+printf("%s",s);
+
+char s[] = "string";
+
+for(char *p = s;*p;++p){
+	printf("%c",*p);
+}
+
+#define ONE (1)
+#define name(n) n*n
+
+Preprocessor
+File Inclusion
+Macro
+Conditional Compilation
+
+#define ONE "One"
+#include<stdio.h>
+#include "my.h"
+
+preproc.h
+#ifndef PREPROC_H_
+#define PREPROC_H_
+#define ONE 1
+const int _iOne = 1;
+const char _sOne[] = "One"
+#endif
+
+#if
+#ifndef
+#ifdef
+#else
+#elif
+#endif
+
+#ifdef MAX
+#define MIN 0
+#else
+#define MIN 1
+#endif
+
+#define max(a, b) (a \
+					> b ? a : b)
+
+Include Guard using #ifndef
+
+Data Types
+
+Strongly typed language
+
+int 
+short int
+long int
+long long int
+signed int
+unsigned int
+unsigned short int
+
+sizeof(int)
+
+L
+LL
+ULL
+
+float 
+double
+long double
+
+char
+char tmp[] = {'H','a','i','\0'};
+	printf("%x",tmp[3]);
+
+char tmp[] = {'H','a','i',0};
+	printf("%x",tmp[3]);
+
+Structure 
+
+struct demo{
+	int no;
+	char *name;
+};
+
+struct demo science;
+science.no = 1;
+science.name = "Science"
+
+struct demo science = {1,"Science"};
+struct demo *tmp = &science;
+tmp->no tmp->name;
+-> Structure derefence operator
+
+C can only have data members inside structure
+
+typedef int points;
+
+typedef struct employee{
+}emp_t;
+
+emp_t joe;
+
+Bit fields
+
+bool likeMusic : 1
+signed int number:4
+
+union simple{ //Both use higher mem
+	char a;
+	int b;
+};
+
+
+
+
+
+
+
+
+

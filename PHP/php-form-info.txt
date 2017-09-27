@@ -1,0 +1,63 @@
+GET POST COOKIE
+
+urlencode()
+urldecode()
+rawurlencode() //Helpful for filesystem
+
+htmlspecialchars()
+htmlentities()
+
+include() require() require_once() inlcude_once()
+
+Headers
+header($string)
+header("Content-Type: application/pdf");
+header("HTTP/1.1 404 Not Found")
+
+headers_list()
+header("Location: login.php")
+exit();
+
+Output Buffering
+
+$_POST
+isset($_POST['submit'])
+isset() strlen() empty() is_null()
+in_array() is_string() is_int() is_float()
+pregmatch("/PHP/",$data)
+strpos($data,"@")
+is_equal()
+=== ==
+
+COOKIE and SESSION
+setcookie($name,$value,$time)
+$_COOKIE['name']
+setcookie($name,$value,$time-3600)
+
+session_start() $_SESSION['name'] = "Jeeva"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

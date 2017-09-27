@@ -1,0 +1,71 @@
+$one = 'info'
+$info = "This is some information"
+$two = ${$one }-> "This is some information"
+
+print_f()
+var_dump()
+$first = array_shift($array)
+$moved_to_first = array_unshift($array,'first')
+pop()
+push()
+
+Times
+Epoch time is UNIX time
+Jan 1 1970
+32 bit system (+and-)
+time() ->Seconds elapsed
+mktime($h,$m,$s,$m,$d,$y)
+strtotime("now")
+strtotime("+1day")
+strtotime("last monday")
+checkdate(12,31,2000)
+
+strftime("%m/%d/%y",$timestamp)
+
+SERVERS AND REQUEST VARIABLES
+
+$_SERVER[]
+->	SERVER_NAME
+->	SERVER_ADDR
+->	SERVER_PORT
+->	DOCUMENT_ROOT
+->	PHP_SELF
+->	SCRIPT_FILENAME
+
+->	REMOTE_ADDR
+-> 	REMOTE_PORT
+-> 	REQUEST_URI
+->	QUERY_STRING
+->	REQUEST_METHOD
+->	REQUEST_TIME
+->	HTTP_REFERER
+->	HHTP_USER_AGENT
+
+Scope
+local
+global and static
+
+Reference assignment
+$tmp = 10
+$ref =& $tmp //Points to tmp
+
+function name(&$name){
+	//Change things locally here but affects
+}
+
+function &name($name){
+	return name; -> Collect ref with =&
+}
+
+."self::$table_name".
+
+join(",",array_keys($array))
+join(",",array_values($array))
+
+parent::save();
+
+
+
+
+
+

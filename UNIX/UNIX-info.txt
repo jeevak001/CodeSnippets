@@ -1,0 +1,610 @@
+UNIX rewritten in C
+UNIX made portable
+Open Closed Mixed
+Linux,Solaris,AIX,HP-UX,Android,iOS
+BSD + NextStepCode = Darwin
+
+
+Session and User
+
+echo "Hello World !"
+exit
+Ctrl C
+
+command option arguments
+echo -n "Hello World"
+ruby -v
+ruby --version
+ls -l -a -h Desktop
+ls -lah Desktop
+banner -w 50 "Hai"
+banner -w50 "Hai"
+cat -n file.txt file1.txt
+
+Kernel and Shell
+Allocates time and memory
+Shell is outer layer of OS
+Main shell (bash 1987) (Many more are available)
+
+bash
+sh
+csh
+echo $SHELL
+echo $0
+exit
+
+Manual Pages
+man echo f b q
+man --help
+man -k banner
+man apropos banner
+whatis banner (No keyword search)
+
+Files and Directories
+pwd
+ls
+ls -la
+ls -lah
+cd dirname
+cd ..
+cd .
+cd ../..
+cd Tab -> Autofill
+cd / -> harddrive
+cd ~ -> Home
+cd - -> Recent
+
+Filesystem
+/ Root
+/bin Binaries Programs (UNIX programs)
+/sbin System programs
+/dev Reference for Devices Keyboard Mouse
+/etc Sys Config
+/home User home
+/lib Libraries
+/tmp Temp files
+/var Various
+/usr/bin User programs
+/usr/etc User programs
+/usr/lib User programs
+/usr/local User programs
+
+
+Working Files
+255 chars
+Avoid symbols
+Case Sensitive
+Escape with \'
+cd Application\ Support
+cd "Application Support"
+
+Text operations
+touch somefile.txt -> Create if not exist
+ed editor
+vi editor
+vim editor
+pico editor or nano editor
+
+nano to open
+ctrl x
+
+Reading Files
+cat simple.txt
+more (space noback)
+less
+less -M file.txt (percentage)
+less -N file.txt (line-number)
+
+head
+tail
+tail -f ->Follow file
+
+Create Directories
+mkdir
+mkdir -p test/test1/test2 ->All parents
+mkdir -v dirname (Verbose feedback)
+ls -la test/
+
+Moving renaming
+mv first.txt test/newfile.txt
+mv newfile.txt ..
+mv file/source/ file/target/
+mv simple.txt renamed.txt
+mv folder foldername
+
+-n nooverwrite
+-f force overwrite
+-i interactive
+-v verbose
+
+-nv -> Can combine options
+
+cp one.txt dest/
+cp one.txt two.txt
+cp -R dir1 dir2
+
+rm file.txt
+rmdir dir
+rm -R dir
+
+ln linkedfile.txt hardlink ->Doesnt go when deleted
+ln -s linkedfile.txt symlink -> Links breaks if moved !
+
+find ~/Sites -name "index.html"
+find ~/Sites -name "index.????"
+find ~/Sites -name "index.*"
+find ~/Sites -name "*.html"
+find ~/Sites -name "index[1234].html"
+
+UNIX rewritten in C
+UNIX made portable
+Open Closed Mixed
+Linux,Solaris,AIX,HP-UX,Android,iOS
+BSD + NextStepCode = Darwin
+
+
+Session and User
+
+echo "Hello World !"
+exit
+Ctrl C
+
+command option arguments
+echo -n "Hello World"
+ruby -v
+ruby --version
+ls -l -a -h Desktop
+ls -lah Desktop
+banner -w 50 "Hai"
+banner -w50 "Hai"
+cat -n file.txt file1.txt
+
+Kernel and Shell
+Allocates time and memory
+Shell is outer layer of OS
+Main shell (bash 1987) (Many more are available)
+
+bash
+sh
+csh
+echo $SHELL
+echo $0
+exit
+
+Manual Pages
+man echo f b q
+man --help
+man -k banner
+man apropos banner
+whatis banner (No keyword search)
+
+Files and Directories
+pwd
+ls
+ls -la
+ls -lah
+cd dirname
+cd ..
+cd .
+cd ../..
+cd Tab
+cd / -> harddrive
+cd ~
+cd -
+
+Working Files
+255 chars
+Avoid symbols
+Case Sensitive
+Escape with \'
+cd "Application Support"
+
+Text operations
+touch somefile.txt
+ed editor
+vi editor
+vim editor
+pico editor or nano editor
+
+nano to open
+ctrl x
+
+cat
+more (space noback)
+less
+less -M file.txt (percentage)
+less -N file.txt (line-number)
+
+head
+tail
+tail -f
+
+Create Directories
+mkdir
+mkdir -p test/test1/test2
+mdir -v dirname (Verbose feedback)
+ls -la test/
+
+Moving renaming
+mv first.txt test/newfile.txt
+mv newfile.txt ..
+mv file/source/ file/target/
+mv simple.txt renamed.txt
+mv folder foldername
+
+-n nooverwrite
+-f force overwrite
+-i interactive
+-v verbose
+
+cp one.txt dest/
+cp one.txt two.txt
+cp -R dir1 dir2
+
+rm file.txt
+rmdir dir
+rm -R dir
+
+ln linkedfile.txt hardlink
+ln -s linkedfile.txt symlink
+
+
+find ~/Sites -name "index.html"
+find ~/Sites -name "index.????"
+find ~/Sites -name "index.*"
+find ~/Sites -name "*.html"
+find ~/Sites -name "index[1234].html"
+find ~/Sites -name "index[1234].html" -and -not -path "*Safari*"
+
+Ownership
+whoami
+$HOME
+/home/jeeva
+
+Groups
+groups
+
+chown kevin file.txt
+chown kevin:group file.txt
+chown :group file.txt
+chown kevin dir
+chown -R kevin dir
+
+sudo chown lynda file.txt
+
+Permissions
+chmod ugo=rwx file
+chmod u=rwx,g=rw,o=rwx file
+chmod ug+w file
+chmod ug-w file
+chmod o-w file
+chmod a+wr file
+
+rwxrw-r-- 764
+chmod 777 file
+chmod 764 file
+chmod 755 file
+chmod 700 file
+
+
+Root User (Superuser)
+sudo
+5min
+sudo -k ->Expire
+sudo whoami
+sudo -u lynda whoami
+
+sudoers
+/etc/sudoers ->Who can sudo
+
+Commands
+/bin/echo ->Location
+whereis echo
+which echo
+whatis echo
+-v --version --help
+
+q x Ctrlx Ctrlq Esc ->Escape
+Ctrl c -> Quit
+exit
+echo 'Hai';echo 'Head';
+
+PATH Variables
+$PATH ->List of paths
+PATH="/usr/bin" ->Path temporary
+
+System Commands
+date
+uptime
+users
+who
+whoami
+uname
+uname -mnrsvp
+uname -ap
+hostname
+domainname
+
+Disk commands
+df
+df -h
+df -H
+du ~/filename
+du -h ~/filename
+du -ah ~/filename
+du -hd 1 ~/filename
+du -hd 0 ~/filename
+Block allocation
+
+Processes
+ps
+ps -a
+ps a
+ps aux
+
+top
+q to quit
+top -n 10 -o cpu -s 3 -U jeeva
+? to see help
+
+CtrlC stop process
+kill 1923 ->pid
+kill -9 1923
+
+wc file.txt
+sort -r file.txt
+sort -u file.txt
+uniq
+uniq -d
+uniq -u
+
+Utilities
+cal
+cal 12 2020
+cal -y 2000
+
+bc
+1+2000
+quit
+scale=10
+
+expr 10/2
+
+units
+
+.bash_history
+history
+!23 -> no denoting the command
+!-20
+!ex
+!!
+sudo !!
+cat !$
+history -d 27
+history -c
+
+Input and Output
+stdin and stdout
+sort file.txt > sorted.txt
+echo "Claire" >> people.txt
+sort < fruits.txt
+wc < fruits.txt
+
+echo "Hello World" | wc
+cat simple.txt | echo
+null device or black hole
+
+UNIX Power Tools
+grep search for test
+Global regular expression test
+
+grep apple fruits.txt
+grep -i apple fruits.txt (Insensitive)
+grep -w apple fruits.txt (Whole word)
+grep -v apple fruits.txt (Dont match)
+grep -n apple fruits.txt (Line Numbers)
+grep -c apple fruits.txt (Count) 
+
+grep -R apple .
+grep -Rn apple . (Line Number)
+grep -Rh apple . (Hide Direc)
+grep -Rl apple . (Dir simplified)
+grep -RL apple . (Not present Dirs)
+grep apple *fruits.txt
+ps aux | grep Terminal
+history | grep ls
+
+Coloring
+grep --color lorum file.txt
+grep --color=auto lorum file.txt
+grep --color=never lorum file.txt
+nano .bash_rc
+export GREP_COLOR="34;47"
+export GREP_OPTIONS="--color=auto"
+
+Regular Expressions
+'apple'
+'a..le'
+'ea[rp]'
+.
+[abc]
+[^abc]
+* + ?
+| ^ $
+\ \d \D \w \W \s \S
+
+Character Classes
+[:alpha:]
+[:digit:]
+[:alnum:]
+[[:alpha:]]
+
+grep -E 'ap+le' ->Use -E to use extended set
+
+Translate
+
+echo 'a,b,c' | tr ',' '-'
+echo '12344243243' | tr '123456' 'EBGDAE'
+echo 'some test' | tr 'A-Za-z' 'N-ZA-Mn-za-z'
+echo '12344243243' | tr '123456' 'x'
+tr [:upper:] [:lower:] < people.txt > correct.txt
+
+xargs
+echo "file.txt" | xargs wc
+echo "file.txt another.txt"  | xargs wc
+echo "file.txt another.txt"  | xargs -n 3 wc
+echo "file.txt another.txt"  | xargs -L 2 wc
+echo "file.txt another.txt"  | xargs -I {} echp "Buy {}"
+
+
+PHP and Linux Setup
+
+sudo apt-get update
+sudo apt-get install man-db zip unzip -y
+sudo mount /dev/cdrom /media/cdrom
+sudo sh /media/cdrom/VboxLinusAdditions.run
+lsmod //Show kernel modules
+
+id
+getent group vboxsf
+sudo usermod -a -G vboxsf jeeva
+sudo usermod -a -G vboxsf www-data
+
+cd /etc/apache2/
+sudoedit ->Create temp and then overrides
+sudoedit sites-availables/vboxsf.conf //Imp or site wont enable
+sudoedit ports.conf
+
+a2ensite a2dissite
+sudo a2ensite vboxsf
+000-default.conf --> Default config
+
+a2enmod a2dismod //Restart required
+sudo a2enmod rewrite
+sudo a2enmod vhost_alias
+sudo a2enmod status
+Restart to avoid conflicts
+
+Apache is installed as service
+service apache2 start/stop/restart/reload //Service restart/reload
+
+PHP
+sudo cp /media/sf_Shared/custom.ini /etc/php5/mods-available/custom.ini
+php5enmod custom
+php5query -M
+sudo apt-get install php5-intl php5-sqlite php5-mcrypt -y
+sudo php5enmod mcrypt
+sudo service apache2 restart
+
+MySql configurations
+Do the character set configs and all
+key_buffer_size
+slow_query_file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

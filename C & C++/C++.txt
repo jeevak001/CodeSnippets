@@ -1,0 +1,169 @@
+cout<<"Hai\n"<<endl;
+cerr<<"Hai\n"<<endl;
+
+using namespace std;
+
+string data;
+cout<<"Enter string?";
+cin>>data; //Seperate by words
+getline(cin,data);
+cout<<data;
+
+#include<iostream>
+#include<cstdio>
+int main(int argc,char** argv){
+
+	return 0;
+}
+
+const int a = 100;
+
+string tmp = "Jeeva is cool !"; //iostream
+for(int i=0;i<tmp.size();i++)
+cout<<tmp[i];
+
+for(char c:string) //For iterator loop
+cout<<c;
+
+string tmp = "Jeeva";
+	for(int i=0;i<tmp.size();i++)
+		cout<<tmp[i]<<endl;
+		
+Escape Sequences
+\\ \' \" \x40
+\n \t \f \b \u03bc
+
+Qualifiers
+Type qualifier and Storage class specifiers
+const volatile mutable --  static extern register
+
+C++ reference types
+int a = 100;
+int &tmp = a;
+tmp = 200;
+cout<<a;
+
+int & name (int & n){
+	n = 100;
+	return n;
+}
+	int tmp = 200;
+	cout<<tmp<<endl;
+	cout<<name(tmp); //Returned value gets to tmp
+	cout<<tmp<<endl;
+	name(tmp) = 2345; //Makes tmp as 2345
+	cout<<tmp<<endl;
+
+struct class{
+	int no;
+	char *name;
+};
+
+struct class science;
+science.no = 1;
+science.name = "Science"
+
+struct class science = {1,"Science"};
+
+Void pointers -> Used when no return type is known
+C++ need explicit casting
+
+void * name(void * name //C Version
+	return name;
+}
+int *data = name("Jeeva");
+
+void * name(void * name){
+	return name;
+}
+int *data = (int *)name((char *)"Jeeva");
+
+auto keyword makes auto detection
+#include<typeinfo>
+typeid(a).name();
+
+vector<int> a = {1,2,3,4};
+for(vector<int>::iterator i = a.begin();i != a.last(); ++i){
+}
+
+for(auto i = a.begin();i != a.last(); ++i){
+}
+
+int * p = new int[100]; //Pointer to memory
+p == NULL
+delete [] p;
+new (nothrow)
+
+and or not bitand bitor xor compl 
+
+Functional Programming
+Call by Value and Call by reference Call by reference type
+
+Function signature
+
+Function Pointer
+void (*fptr)() = func;
+(*fptr)();
+
+void func(){}
+
+Function Overloading
+
+Recursion
+
+Classes and Objects
+
+class name{
+
+}
+
+name a = null;
+
+Getters and Setters
+Class Private by default
+Constructors
+Overload Constructors
+Overload Operators
+
+Namespace
+namespace name{//Decs go here !};
+
+using namespace name;
+
+using namespace name::data;
+
+Inheritance
+class Dog : public Animal
+
+Dog a("Shepherd");
+
+Dog a = new Dog("Shepherd");
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

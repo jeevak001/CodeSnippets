@@ -1,0 +1,46 @@
+{}
+strtolower()
+strtoupper()
+ucfirst()
+ucwords()
+strlen()
+trim()
+strstr(data,tofind)
+str_replace(a,b,data)
+str_repeat()
+substr(data,5,10)
+strpos(data,value)
+strchr(data,'z')
+
+abs() pow(2,8) sqrt() fmod(20,7) rand() rand(1,10)
+round() ceil() floor()
+
+is_int() is_float() is_numeric() is_bool()
+
+$a = array()
+$a = [1,2,3]
+$a[] = 2 ->Add dynamically
+count() max() min() sort() rsort()
+implode("*") explode("*")
+in_array(19)
+
+isset() empty() is_null()
+
+gettype() settype($data,"string")
+(string) $data
+
+define("MAX_WIDTH",100) 
+
+Array Pointers
+current($array) next($array)
+reset($array) end($array)
+
+Error Reporting
+error_reporting(E_ALL | E_STRICT)
+
+
+
+ 
+
+
+

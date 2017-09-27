@@ -1,0 +1,31 @@
+file_uploads = on
+php.ini
+upload_tmp_dir = NULL
+post_max_size = 8M
+upload_max_filesize = 2M
+max_execution_time = 30
+max_input_time = -1
+memory_limit = 128M
+
+enctype = "multipart/form-data"
+<input type="hidden" name="MAX_FILE_SIZE" value=2000000/>
+<input type="file" value="Upload"/>
+
+$_FILES['name_of_file']['name']
+$_FILES['name_of_file']['type']
+$_FILES['name_of_file']['size']
+$_FILES['name_of_file']['tmp_name']
+$_FILES['name_of_file']['error']
+
+0 UPLOAD_ERR_OK
+1 UPLOAD_ERR_INI_SIZE
+2 UPLOAD_ERR_FORM_SIZE
+3 UPLOAD_ERR_PARTIAL
+4 UPLOAD_ERR_NO_FILE
+6 UPLOAD_ERR_NO_TMP_DIR
+7 UPLOAD_ERR_CANT_WRITE
+8 UPLOAD_ERR_EXTENSION
+
+$tmp_file = $_FILES['form_name']['tmp_name'];
+$target = basename($_FILES['form_name']['name']);
+move_uploaded_file($tmp_file,"uploads/".$target); ->return false if problem

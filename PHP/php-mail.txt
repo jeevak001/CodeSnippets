@@ -1,0 +1,48 @@
+SMTP
+smtp_port
+sendmail_from
+sendmail_path
+
+$result = mail(to,sub.message,headers);
+
+wordwrap($message,70)
+
+$headers = "From:{$from}\r\n";
+$headers = "Reply-To:{$from}\r\n";
+$headers .= "Content-Type:text/html;charset=iso-8859-1\r\n"
+
+SMTP
+bypass sendmail and do manually
+Server/Host
+Port
+Authentication
+Username
+Password
+
+PHPMailer
+require_once(class.phpmailer.php);
+require_once(class.smtp.php);
+require_once(language/phpmailer.lang-en.php);
+
+AddAddress($to,$to_name);
+$mail->Send(); //Sendmail only
+
+Setting SMTP
+$mail = new PHPMailer();
+$mail->IsSMTP()
+$mail->Host = 
+$mail->Port = 
+$mail->SMTPAuth = 
+$mail->Username = 
+$mail->Password = 
+
+Notification
+<<<EMAILBODY
+
+	EMAILBODY
+	
+
+
+
+
+

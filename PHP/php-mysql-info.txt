@@ -1,0 +1,14 @@
+mysqli_connect()
+mysqli_connect_errno()
+mysqli_connect_error()
+mysqli_real_escape_string()
+mysqli_query()
+mysqli_fetch_array()
+mysqli_fetch_assoc()
+mysqli_affected_rows()
+mysqli_row_count()
+mysqli_close()
+
+die("Error !") or exit("Error");
+
+Prepared statement
